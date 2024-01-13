@@ -10,19 +10,18 @@ const wrongNumbers = [];
 
 
 /*Ciclo per richiamare più volte la funzione creatrice del numero random*/
-for (let i = 0; i < 5; i++) {
+while(startingNumbers.length < 5){
 
     const randomNumber = numberRandomizer();
-
+    
     if (!(startingNumbers.includes(randomNumber))) {
         startingNumbers.push(randomNumber);
-    } else {
-        i--;
-    }
+    } 
 
-    writeStartingNumbers()
+    writeStartingNumbers();
 
 }
+
 
 /*Funzione che scrive gli iniziali numeri in pagina*/
 function writeStartingNumbers() {
@@ -35,7 +34,7 @@ function writeStartingNumbers() {
 /*Funzione per creare un numero random (da 0 a 10)*/
 function numberRandomizer() {
 
-    return Math.floor(Math.random() * 10);
+    return Math.floor(Math.random() * 11);
 
 }
 
@@ -53,7 +52,7 @@ function risposta() {
 }
 
 /*Applicato ritardo sulla funzione guessIt*/
-setTimeout(guessIt, 30000);
+setTimeout(guessIt, 2000);
 
 
 /*Funzione che chiede all'utente di inserire i numeri per poi smistarli nei vari array di supporto*/
